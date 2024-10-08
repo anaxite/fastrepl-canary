@@ -4,11 +4,8 @@ import unocss from "unocss/vite";
 
 const sidebar = [
   {
-    text: "Start Here",
-    items: [
-      { text: "What is Canary?", link: "/" },
-      { text: "Why use Canary?", link: "/docs/why" },
-    ],
+    text: "About Canary",
+    link: "/docs",
   },
   {
     text: "Common",
@@ -233,7 +230,8 @@ export default defineConfig({
   themeConfig: {
     search: { provider: "local" },
     // https://vitepress.dev/reference/default-theme-config
-    siteTitle: "🐤 Canary",
+    siteTitle: "Canary",
+    logo: { src: '/getcanary-logo.svg', width: 24, height: 24 },
     nav: [
       { text: "Blog", link: "/blog" },
       {

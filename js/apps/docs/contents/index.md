@@ -1,90 +1,53 @@
-<script setup>
-import Chat from '../components/Chat.vue'
-import Headline from '../components/Headline.vue'
-import KeywordSearchProblem from '../components/KeywordSearchProblem.vue'
-import KeywordSearchSolution from '../components/KeywordSearchSolution.vue'
-import SearchDigestProblem from '../components/SearchDigestProblem.vue'
-import SearchDigestSolution from '../components/SearchDigestSolution.vue'
-import QueryRankChart from '../components/QueryRankChart.vue'
+---
+layout: home
 
-const keywordSearchProblemExample = {
-  left: {
-    query: "how to limit api cost",
-    items: [
-      {
-        title: "Router - Load Balancing, Fallbacks",
-        excerpt: "...litellm_model_<mark>cost</mark>_map -> use deployment_<mark>cost</mark>..."
-      }
-    ],
-    emoji: "😢"
-  },
-  right: {
-    query: "budget",
-    items: [
-      {
-        title: "Budgets, Rate Limits",
-        excerpt: "Set <mark>Budget</mark>s"
-      },
-      {
-        title: "Budgets, Rate Limits",
-        excerpt: "Setting Team <mark>Budget</mark>s"
-      }
-    ],
-    emoji: "😊"
+title: Get Canary
+
+hero:
+  name: Canary
+  text: UI Components for Your Docs Search
+  tagline: Give your users a beautiful search experience
+  actions:
+    - theme: brand
+      text: What is Canary?
+      link: /docs/
+    #- theme: brand
+    #  text: Guides
+    #  link: /guide/getting-started
+    - theme: alt
+      text: GitHub
+      link: https://github.com/fastrepl/canary
+  image:
+    src: /getcanary-logo-512.webp
+    alt: Canary
+
+features:
+  - icon: 🔍
+    title: For local or cloud-based searches
+  - icon: 🚀
+    title: Tiny components that work anywhere
+  - icon: ⚙️
+    title: Modular and open-source 
+---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(to right, rgb(253, 224, 71) 0%, rgb(234, 179, 8) 50%, rgb(250, 204, 21) 100%);
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgb(253, 224, 71) 0%, #ffffff44 50%, rgb(250, 204, 21) 100%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
   }
 }
 
-const searchDisgestProblemExample = {
-  query: "config feature_a",
-  items: [
-    {
-      excerpt: "<mark>feature_a</mark>: option_1, option_2, option_3, option_4, option_5...",
-      title: "Reference - <mark>config</mark>.yaml"
-    },
-    {
-      excerpt: "...<mark>feature_a</mark>is really good. there's 999 ways of doing...",
-      title: "What is <mark>Feature_A</mark>?"
-    },
-    {
-      excerpt: "...to configure options for <mark>feature_a</mark>, you shoud do this and that...",
-      title: "Tutorial - <mark>Config</mark>uration"
-    }
-  ]
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
 }
-</script>
-
-<Headline />
-
-> 🐤Canary is [open-source](https://github.com/fastrepl/canary)! Give us a ⭐️ if you like it.
-
-## Search works, only when users know the <ins>"keyword"</ins>
-
-Typical search experience looks like this:
-
-<KeywordSearchProblem v-bind="keywordSearchProblemExample" />
-
-And this leads to bunch of support questions like:
-
-<Chat
-  left="👤 hi there! how can i <strong>set limit for api cost?</strong>"
-  right="we <strong>already have docs</strong> for that. (readthemanual.com/<strong>budget</strong>-and-rate-limits) 👤"
-/>
-
-::: warning With Canary, keywords are "inferred" ↓
-
-<KeywordSearchSolution />
-
-:::
-
-## Search results are not always easy to digest
-
-As documentation grows, users **often need to read multiple sections and pages to get questions answered**.
-This can be very time-consuming and frustrating.
-
-<SearchDigestProblem v-bind="searchDisgestProblemExample" />
-
-::: warning With Canary question is "answered" with reference ↓
-
-<SearchDigestSolution />
-
-:::
+</style>
