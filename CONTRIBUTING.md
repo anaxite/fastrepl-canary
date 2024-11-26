@@ -1,13 +1,34 @@
-# Contribution Guidelines
+# How to contribute
 
-## @getcanary/web
+Contributions are welcome, especially for the `@getcanary/web` package and the docs. Follow the instructions in this document to get started.
+
+## Quick start
+
+1. Fork this repository
+2. Create a new local branch
+3. Submit a merge request upstream from your local branch.
+
+## Set up dev environments
+
+### @getcanary/web
+
+`@getcanary/web` files are in js/packages/web. Install dependencies with npm, and use Storybook for development.
 
 ```bash
-git clone https://github.com/fastrepl/canary.git && cd canary/js/packages/web && npm i && npm run storybook
+cd <git_repo>/js/packages/web
+npm install
+npm run storybook
 ```
 
-## @getcanary/docs
+### Documentation
+
+The @getcanary documentation platform is based on VitePress.
+
+Documentation files are in js/apps/docs. Install dependencies with npm, and run a first build to enable dev previews.
 
 ```bash
-git clone https://github.com/fastrepl/canary.git && cd canary/js/apps/docs && npm i && npm run build && npm run dev
+cd <git_repo>/js/apps/docs
+npm install
+npm run build
+npm run dev
 ```
