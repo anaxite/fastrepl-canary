@@ -14,6 +14,17 @@ const sidebar = [
     ],
   },
   {
+    text: "Setup",
+    collapsed: false,
+    items: [
+      { text: "Astro", link: "/docs/setup/astro.md", },
+      { text: "Astro Starlight", link: "/docs/setup/starlight.md", },
+      { text: "Docusaurus", link: "/docs/setup/docusaurus.md", },
+      { text: "Nextra", link: "/docs/setup/Nextra.md", },
+      { text: "VitePress", link: "/docs/setup/vitepress.md", },
+    ],
+  },
+  {
     text: "Common",
     items: [
       {
