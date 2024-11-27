@@ -12,7 +12,9 @@ Contributions are welcome, especially for the `@getcanary/web` package and the d
 
 ### @getcanary/web
 
-`@getcanary/web` files are in js/packages/web. Install dependencies with npm, and use Storybook for development.
+`@getcanary/web` files are in js/packages/web.
+
+Install dependencies with npm, and use Storybook for development.
 
 ```bash
 cd <git_repo>/js/packages/web
@@ -22,9 +24,11 @@ npm run storybook
 
 ### Documentation
 
-The @getcanary documentation platform is based on VitePress.
+The @getcanary documentation platform is based on VitePress. Documentation files are in js/apps/docs, but you first need to install the dependencies for `@getcanary/web` to build properly.
 
-Documentation files are in js/apps/docs. Install dependencies with npm, and run a first build to enable dev previews.
+1. Install `@getcanary/web` dependencies.
+2. Install docs dependencies with npm.
+3. Run a first build to enable dev previews.
 
 ```bash
 cd <git_repo>/js/apps/docs
